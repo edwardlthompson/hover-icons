@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+* **pack:** Hover Icons catalog, dry-run CI renderer, and Cycles OptiX goldens for camera and messages
+
+### Fixed
+
+* **ci:** allowlist first-milestone `renders/golden/` PNGs in the 500 KB hygiene gate
+
 ## [1.0.0](https://github.com/edwardlthompson/hover-icons/compare/v1.4.0...v1.0.0) (2026-09-14)
 
 
@@ -187,16 +197,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Miscellaneous
 
 * **release:** prepare v1.0.0 release ([6e037a2](https://github.com/edwardlthompson/hover-icons/commit/6e037a237aaa62c9b6c4514264ca527437056e21))
-
-## [Unreleased]
-
-### Added
-
-* **pack:** Hover Icons catalog, dry-run CI renderer, and Cycles OptiX goldens for camera and messages
-
-### Fixed
-
-* **ci:** allowlist first-milestone `renders/golden/` PNGs in the 500 KB hygiene gate
 
 ## [1.4.0](https://github.com/edwardlthompson/agent-project-bootstrap/compare/v1.3.0...v1.4.0) (2026-09-11)
 
