@@ -1,15 +1,11 @@
 # GitHub About Block
 
-## Template Repo Description (350 chars max)
+## Draft Description (edit to <=350 chars)
 
-FOSS GitHub Template for coding agents (Cursor, Windsurf, Antigravity, and others). One AGENTS.md, a 10-minute tour, CI and security on by default, labeled sprints, and Golden Path stubs (Web, Python, Android). MIT.
+Hover Icons — FOSS photorealistic 3D icon pack from a locked YAML catalog. Simple 2D icon to the same outline in 3D; tame or neon from one catalog. MIT code, CC0 assets.
 
 ## Topics
 
-agents, cursor, windsurf, antigravity, template-repository, foss, mit, github-actions, pwa, python, android
+foss, icons, blender, python, cc0, 3d
 
-Suggested for GitHub discoverability (Settings → About). Prefer 5–10 short topics that match how people search.
-
-## Child Project Draft
-
-[PROJECT_NAME] — [ONE_LINE_PURPOSE]. Built with agent-project-bootstrap. FOSS MIT.
+Suggested for GitHub discoverability (Settings → About).

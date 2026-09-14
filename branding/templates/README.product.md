@@ -10,12 +10,21 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-{{badge_license}}?style=flat-square" alt="MIT" />
+  <img src="https://img.shields.io/badge/template-{{template_version}}-0969da?style=flat-square" alt="template" />
   <img src="https://img.shields.io/badge/FOSS-no_tracking-{{badge_foss}}?style=flat-square" alt="FOSS" />
-  <img src="https://img.shields.io/badge/status-active-{{badge_primary}}?style=flat-square" alt="status" />
-  <img src="https://img.shields.io/github/actions/workflow/status/{{ci_repo}}/ci.yml?style=flat-square&label=CI" alt="CI" />
-  <img src="https://api.securityscorecards.dev/projects/github.com/{{ci_repo}}/badge" alt="OpenSSF Scorecard" />
+  <a href="https://github.com/{{ci_repo}}/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/{{ci_repo}}/ci.yml?style=flat-square&label=CI" alt="CI" /></a>
+  <a href="https://{{pages_host}}/"><img src="https://img.shields.io/badge/Pages-demo-0969da?style=flat-square" alt="Pages demo" /></a>
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/{{ci_repo}}"><img src="https://api.securityscorecards.dev/projects/github.com/{{ci_repo}}/badge" alt="OpenSSF Scorecard" /></a>
+  <a href="https://www.bestpractices.dev/projects/14564"><img src="https://www.bestpractices.dev/projects/14564/badge" alt="OpenSSF Best Practices" /></a>
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/14564/badge)](https://www.bestpractices.dev/projects/14564)
   <a href="https://codespaces.new/{{ci_repo}}"><img src="https://img.shields.io/badge/Codespaces-Open-181717?style=flat-square&logo=github" alt="Open in GitHub Codespaces" /></a>
-{{stack_badges}}
+  <img src="https://img.shields.io/badge/AGENT-Cursor_Agent-2ea043?style=flat-square" alt="AGENT" />
+  <img src="https://img.shields.io/badge/HUMAN-Human_Developer-0969da?style=flat-square" alt="HUMAN" />
+  <img src="https://img.shields.io/badge/ADB-Android_Device-bf8700?style=flat-square" alt="ADB" />
+  <img src="https://img.shields.io/badge/AUTO-CI_Scripts-656d76?style=flat-square" alt="AUTO" />
+  <img src="https://img.shields.io/badge/web-stack-646cff?style=flat-square" alt="web" />
+  <img src="https://img.shields.io/badge/python-stack-3776AB?style=flat-square" alt="python" />
+  <img src="https://img.shields.io/badge/android-stack-3DDC84?style=flat-square" alt="android" />
 </p>
 
 ## Pitch
@@ -25,10 +34,21 @@
 ## Demo
 
 <p align="center">
+  <img src="renders/golden/camera_tame.png" alt="camera tame" width="240" />
+  <img src="renders/golden/camera_neon.png" alt="camera neon" width="240" />
+  <img src="renders/golden/messages_tame.png" alt="messages tame" width="240" />
+  <img src="renders/golden/messages_neon.png" alt="messages neon" width="240" />
+</p>
+
+<p align="center">
   <img src="{{lockup_path}}" alt="{{name}} lockup" width="320" />
 </p>
 
-> Add screenshots or a short demo GIF under `docs/images/` and link them here when available.
+First four goldens: camera and messages × tame / neon (1024×1024, Cycles OptiX).
+
+## GitHub Pages Demo
+
+The `examples/web` PWA deploys to GitHub Pages on push to `main`. Demo URL: [https://{{pages_host}}/](https://{{pages_host}}/).
 
 ## Features
 

@@ -7,9 +7,11 @@
 
 | Layer | Technology | Version | Notes |
 |-------|-----------|---------|-------|
-| Platform | Multi-stack template (Web, Python, Android, Node, optional Lightroom/Rust/Go) | 1.4.0 | Template maintainer repo |
-| License | MIT | - | Pure FOSS |
-| Distribution | GitHub Releases + GitHub Pages demo | - | F-Droid/Winget stubs for child repos |
+| Layer | Technology | Version | Notes |
+|-------|-----------|---------|-------|
+| Platform | Python catalog + optional local Blender/Cycles | 0.1.0 | Child of agent-project-bootstrap 1.4.0 |
+| License | MIT code; CC0 SVGs and generated PNGs | - | See LICENSE-ASSETS.md |
+| Distribution | GitHub; golden PNGs in renders/golden | - | Bulk renders gitignored |
 ## Active Modules
 
 - ✅ Web / PWA (`modules/web/MODULE.md`)
@@ -34,7 +36,9 @@
 
 ### Project Purpose
 
-FOSS coding-agent bootstrap template: labeled BUILD_PLAN sprints, Golden Path examples, CI guardrails, workspace memory, and design-system cohesion across Web and Android.
+**Hover Icons** / pack `photoreal-simple-icons`. Simple 2D icon → same outline in 3D → glossy floating object → tame or neon (and later materials) from one catalog. First milestone: camera + messages × tame + neon. Do not implement Golden Path About/donate as the product.
+
+Canon: `AGENT.md`. Board: `BUILD_PLAN.md` Product (do not drift) block. CI backend: dry-run. Production renderer: Blender/Cycles OptiX on the local RTX 4090.
 
 ### Key Constraints
 

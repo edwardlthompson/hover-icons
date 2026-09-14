@@ -1,31 +1,31 @@
 {
-  "mode": "template",
-  "name": "Golden Path",
-  "short_name": "GoldenPath",
-  "tagline": "FOSS apps with a clear path from idea to release",
-  "pitch": "Golden Path is the reference product identity shipped with agent-project-bootstrap: a privacy-respecting FOSS stack with design tokens, CI guardrails, and agent-ready sprints so you can go from template to a shippable app without reinventing the foundation.",
+  "mode": "product",
+  "name": "Hover Icons",
+  "short_name": "HoverIcons",
+  "tagline": "Simple 2D icons as glossy floating 3D objects",
+  "pitch": "Hover Icons is a FOSS pack of simple, instantly recognizable 2D icons turned into photo-realistic 3D objects: slightly extruded, beveled, studio-lit, with tame or neon materials from one locked YAML catalog.",
   "features": [
-    "Cross-stack design tokens with light, dark, and system themes",
-    "Labeled BUILD_PLAN sprints for humans, agents, and CI",
-    "Web PWA and Android FOSS golden-path stubs ready to prune or extend",
-    "Security defaults: Dependabot, CodeQL, gitleaks, and weekly triage docs",
-    "Replaceable branding kit — swap logos and colors when your identity is ready"
+    "Locked prompt template plus YAML catalog — agents never free-form prompts",
+    "Tame satin plastic and neon emissive presets on the same mesh",
+    "Dry-run CI backend; local Blender/Cycles OptiX on a GPU for goldens",
+    "Camera and messages as the first two icons (1024×1024, Android-safe padding)",
+    "CC0 authored SVGs and generated PNGs; MIT code"
   ],
   "quick_start": [
-    "Clone the repo and run `./scripts/init-project.sh` (or `.\\scripts\\init-project.ps1` on Windows).",
-    "Open your coding agent and follow `docs/START_HERE.md`. First-time walk: `docs/help/TOUR.md` (Cursor: `/tour`).",
-    "Set `branding/product.json` `mode` to `product`, fill name/tagline/pitch, then run `python3 scripts/generate-project-readme.py`."
+    "Read AGENT.md, then the Product (do not drift) block in BUILD_PLAN.md.",
+    "Run `python3 scripts/validate_catalog.py` then `python3 scripts/render_icons.py --backend dry-run`.",
+    "On a CUDA box with official Blender, set BLENDER_BIN and render with `--backend blender --quality release`."
   ],
-  "install": "Requirements depend on your active stack (Node 20+, Python 3.11+, Android SDK). See the active `modules/{stack}/MODULE.md` and `examples/{stack}/README.md`.",
-  "usage": "Use `/bootstrap` for Sprint 0, `/build` for features, and `/verify` before merge. Edit colors in `design-tokens/design-tokens.json` and logos in `branding/assets/`, then run `python3 scripts/sync-design-tokens.py`.",
+  "install": "Python 3.11+ and uv for the catalog CLI. Optional: official Blender 4.2+ with OptiX for photoreal PNGs. See docs/RENDER_BACKEND.md.",
+  "usage": "Add an SVG under catalog/sources/, add a YAML block, validate, dry-run, then optionally Blender-render. Use `/verify` before merge.",
   "urls": {
-    "docs": "docs/START_HERE.md",
+    "docs": "AGENT.md",
     "contributing": "CONTRIBUTING.md",
     "security": "SECURITY.md",
     "license": "LICENSE",
-    "design": "docs/DESIGN_GUIDE.md",
+    "design": "docs/STYLE.md",
     "branding": "branding/BRANDING.md",
-    "github_repo": "edwardlthompson/agent-project-bootstrap"
+    "github_repo": "edwardlthompson/hover-icons"
   },
   "badge": {
     "primary": "e94560",
@@ -34,8 +34,6 @@
     "foss": "656d76"
   },
   "stacks": [
-    "web",
-    "python",
-    "android"
+    "python"
   ]
 }

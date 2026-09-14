@@ -1,0 +1,30 @@
+pack:
+  name: photoreal-simple-icons
+  camera: "15-degree three-quarter, floating"
+  backdrop: "infinite seamless light-gray"
+  resolution: 1024
+  controlnet:
+    type: canny
+    weight: 0.75
+  seed_strategy: "hash of icon id"
+
+icons:
+  - id: camera
+    source: catalog/sources/camera.svg
+    description: "classic simple camera: rounded rectangle body, large circular lens, small viewfinder bump on top"
+    color: "#424242"
+    effects:
+      tame:
+        material: "satin plastic with a soft gloss, subtle studio reflections"
+      neon:
+        material: "same plastic but with a thin inner emissive glow along the edges and lens rim, faint bloom, still readable"
+
+  - id: messages
+    source: catalog/sources/messages.svg
+    description: "classic rounded speech-bubble with a small triangular tail, solid blue"
+    color: "#2196F3"
+    effects:
+      tame:
+        material: "satin plastic with a soft gloss, subtle studio reflections"
+      neon:
+        material: "same plastic but with a thin inner emissive glow along the edges, faint bloom, still readable blue"

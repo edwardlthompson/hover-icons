@@ -1,6 +1,7 @@
 # Agent Router
 
-1. **First read:** `docs/START_HERE.md`
+0. **Product brief (do not skip):** [`AGENT.md`](AGENT.md) — Hover Icons / photoreal-simple-icons. Then the Product (do not drift) block in `BUILD_PLAN.md`. `examples/python/src/hello/` is CI glue, not the app.
+1. **First process read:** `docs/START_HERE.md`
 2. **Cursor modes:** `docs/CURSOR_MODES.md` (Ask / Plan / Agent / Debug routing)
 3. **Why / coach:** `docs/BEST_PRACTICES.md` · 30-day playbook `docs/FIRST_30_DAYS.md` · `/coach` · backlog `/ideas` (`docs/help/IDEAS.md`) · full dump `/allideas` (`docs/help/ALLIDEAS.md`) · first-run `/tour` (`docs/help/TOUR.md` in other IDEs) · portability `docs/AGENT_PORTABILITY.md`
 4. **Bootstrap mode:** `docs/INITIALIZATION_PROMPT.md`
@@ -14,12 +15,11 @@
 ## Project Overview & Architecture
 
 <!-- bootstrap-project-card -->
-**Product:** agent-project-bootstrap
-**Purpose:** GitHub Template for FOSS coding-agent projects
-**Stack:** multi
+**Product:** Hover Icons
+**Purpose:** FOSS photorealistic 3D icon pack from a locked YAML catalog and prompt template. Simple 2D icon to same outline in 3D to glossy floating object; tame or neon from one catalog; not a Golden Path app.
+**Stack:** python
 <!-- /bootstrap-project-card -->
-
-This repository is a **GitHub Template** for FOSS projects with coding agents (Cursor, Windsurf, Antigravity, Claude Code, Copilot, Gemini CLI, Aider, Cline). Child repos start from **Use this template**, then `scripts/init-project.sh` (or `.ps1`). Edit `AGENTS.md`, then `bash scripts/bootstrap-lifecycle.sh --sync-adapters`.
+This repository is **Hover Icons**, a FOSS photorealistic 3D icon pack bootstrapped from agent-project-bootstrap. The pack spec is [`AGENT.md`](AGENT.md). Edit `AGENTS.md` for agent routing, then `bash scripts/bootstrap-lifecycle.sh --sync-adapters`.
 
 - **Composition:** stack modules (`modules/{stack}/`) + Golden Path examples (`examples/{stack}/`) + agent routing
 - **Lifecycle:** preflight → init (stack, branding, prune) → post hooks (adapters, checklist, manifest)

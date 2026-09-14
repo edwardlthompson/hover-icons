@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <!-- Classic simple camera. Separate fills (not even-odd holes). CC0. -->
+  <rect x="40" y="72" width="176" height="120" rx="28" fill="#424242"/>
+  <rect x="108" y="52" width="40" height="28" rx="8" fill="#424242"/>
+  <circle cx="128" cy="132" r="40" fill="#2a2a2a"/>
+  <circle cx="176" cy="96" r="8" fill="#6a6a6a"/>
+</svg>

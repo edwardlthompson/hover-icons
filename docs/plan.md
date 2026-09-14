@@ -1,22 +1,22 @@
 # Implementation Plan
 
-> Task breakdown stub. Child repos replace this with the first milestone. Active work lives in `BUILD_PLAN.md`.
+> Active work lives in [`BUILD_PLAN.md`](../BUILD_PLAN.md). Product brief: [`AGENT.md`](../AGENT.md).
 > Status: 🔲 open · ✅ done · ❌ blocked.
 
-## Milestone — Bootstrap standards (M36)
+## Milestone — First catalog (two icons × two effects)
 
 | Task | Owner | Tests / fallback |
-|------|-------|------------------|
-| ✅ Manifest + pre/post hooks | AGENT | `tests/test_bootstrap_engine.py` |
-| ✅ AGENTS.md spec + adapters | AGENT | `check-bootstrap-engine.sh` + file presence |
-| ✅ SDD stubs (`docs/spec.md`, this file) | AGENT | `validate-bootstrap.sh` REQUIRED list |
-| ✅ Init dry-run asserts new artifacts | AGENT | `simulate-template-upgrade.sh` |
+|------|--------|------------------|
+| Canon lock (`AGENT.md`, BUILD_PLAN Product block) | AGENT | `scripts/check-product-brief.sh` |
+| Catalog YAML + SVGs + locked prompts | AGENT | `scripts/validate_catalog.py` |
+| Dry-run render jobs + seeds | AGENT | `uv run pytest` in `examples/python` |
+| Catalog CI job | AUTO | `.github/workflows/ci.yml` catalog job |
+| Blender/Cycles OptiX goldens | AGENT | Local `--backend blender`; CI does not run this |
 
 ## Next feature
 
-1. Copy `docs/features/_template.md` → `docs/features/{name}.md`
-2. Lock the public API (Sequential)
-3. Add unit tests before or with the implementation
-4. Run `python3 scripts/agent-run.py watch-agent-gates --once --autofix`
+1. Keep adding icons only via YAML + SVG.
+2. Add material presets (glass, metal, ceramic) as extra effect folders on cached meshes.
+3. Run `python3 scripts/agent-run.py watch-agent-gates --once --autofix`
 
 If automated tests are not feasible, write the justification and fallback command in the feature spec before marking the BUILD_PLAN row ✅.

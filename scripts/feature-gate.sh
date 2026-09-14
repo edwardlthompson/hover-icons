@@ -133,6 +133,8 @@ fail_gate() {
     python-type-mypy) SUGGESTED=("fix mypy errors in examples/python") ;;
     python-type-pyright) SUGGESTED=("fix pyright errors in examples/python") ;;
     python-test) SUGGESTED=("fix pytest failures in examples/python") ;;
+    catalog-validate) SUGGESTED=("run python3 scripts/validate_catalog.py" "add missing catalog/sources SVG") ;;
+    product-brief) SUGGESTED=("keep AGENT.md and the BUILD_PLAN Product (do not drift) one-liner") ;;
     file-limits) SUGGESTED=("split oversized static-data/logic files per AGENTS.md limits") ;;
     android-test) SUGGESTED=("fix JUnit failures" "run ./gradlew test in examples/android") ;;
     design-cohesion) SUGGESTED=("run scripts/check-design-cohesion.sh" "use design tokens and i18n keys") ;;
@@ -337,6 +339,8 @@ if should_run python && [ -f examples/python/pyproject.toml ]; then
     run_in_dir examples/python python-type-mypy uv run mypy src
     run_in_dir examples/python python-type-pyright uv run pyright
     run_in_dir examples/python python-test uv run pytest -q
+    run_cmd catalog-validate bash scripts/validate_catalog.py
+    run_cmd product-brief bash scripts/check-product-brief.sh
   fi
 fi
 

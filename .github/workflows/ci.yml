@@ -129,6 +129,24 @@ jobs:
       - name: Check text files are UTF-8
         run: bash scripts/check-file-encoding.sh
 
+  catalog:
+    name: Catalog - YAML, sources, product brief
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Product brief anti-amnesia
+        run: bash scripts/check-product-brief.sh
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+      - name: Sync python extras
+        working-directory: examples/python
+        run: uv sync --locked --all-extras
+      - name: Validate catalog schema and sources
+        run: uv run --project examples/python python -m iconpack.validate
+      - name: Dry-run does not require GPU
+        run: uv run --project examples/python python -m iconpack.cli --backend dry-run
+
   file-limits:
     name: File Size Budgets
     runs-on: ubuntu-latest

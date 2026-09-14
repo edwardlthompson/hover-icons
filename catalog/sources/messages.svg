@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <!-- One closed path so the tail survives SVG import. CC0. -->
+  <path fill="#2196F3" d="M72 40h112a36 36 0 0 1 36 36v56a36 36 0 0 1-36 36h-60L72 214V168A36 36 0 0 1 36 132V76A36 36 0 0 1 72 40z"/>
+</svg>

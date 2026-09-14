@@ -1,9 +1,9 @@
 {
   "template_version": "1.4.0",
   "project": {
-    "name": "agent-project-bootstrap",
-    "purpose": "GitHub Template for FOSS coding-agent projects",
-    "stack": "multi"
+    "name": "Hover Icons",
+    "purpose": "FOSS photorealistic 3D icon pack from a locked YAML catalog and prompt template. Simple 2D icon to same outline in 3D to glossy floating object; tame or neon from one catalog; not a Golden Path app.",
+    "stack": "python"
   },
   "entry_points": {
     "bootstrap": "docs/START_HERE.md",
@@ -1281,6 +1281,13 @@
       "path": ".github/workflows/release.yml",
       "purpose": "SBOM, provenance attestation, and GitHub Release on version tags",
       "read_when": "release",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
+    },
+    {
+      "path": "scripts/create-product-github-repo.sh",
+      "purpose": "Create child origin GitHub repo without pushing to bootstrap-upstream",
+      "read_when": "bootstrap_session_start",
       "update_when": "milestone_boundary",
       "owner": "maintainer"
     },
@@ -3041,6 +3048,75 @@
       "path": ".github/workflows/sbom-diff-dependabot.yml",
       "role": "gate",
       "notes": "Indexed for TEMPLATE_INDEX completeness"
+    },
+    {
+      "path": "AGENT.md",
+      "purpose": "Hover Icons product brief — original icon-pack source of truth",
+      "read_when": "session_start",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
+    },
+    {
+      "path": "LICENSE-ASSETS.md",
+      "purpose": "CC0 vs MIT vs third-party 2D source licenses",
+      "read_when": "reference",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
+    },
+    {
+      "path": "docs/STYLE.md",
+      "purpose": "Icon pack lighting and silhouette rules",
+      "read_when": "feature_work",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
+    },
+    {
+      "path": "docs/RENDER_BACKEND.md",
+      "purpose": "dry-run vs Blender/Cycles OptiX; what CI never runs",
+      "read_when": "feature_work",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
+    },
+    {
+      "path": "docs/adr/0006-blender-production-renderer.md",
+      "purpose": "ADR: Blender production renderer, dry-run CI, SD deferred",
+      "read_when": "feature_work",
+      "update_when": "never",
+      "owner": "maintainer"
+    },
+    {
+      "path": "catalog/icons.yaml",
+      "purpose": "Master icon catalog — agents fill template slots only",
+      "read_when": "feature_work",
+      "update_when": "feature_complete",
+      "owner": "maintainer"
+    },
+    {
+      "path": "scripts/check-product-brief.sh",
+      "role": "gate",
+      "notes": "Anti-amnesia: AGENT.md + BUILD_PLAN one-liner / camera / messages / tame / neon"
+    },
+    {
+      "path": "scripts/validate_catalog.py",
+      "role": "gate",
+      "notes": "Validate icons.yaml schema and source files"
+    },
+    {
+      "path": "scripts/render_icons.py",
+      "role": "script",
+      "notes": "Fill locked prompts and call dry-run or Blender backend"
+    },
+    {
+      "path": "scripts/blender_batch.py",
+      "role": "script",
+      "notes": "Headless Blender locked studio scene; runs inside Blender Python"
+    },
+    {
+      "path": ".cursor/rules/product.mdc",
+      "purpose": "Always-on Cursor rule pointing at AGENT.md",
+      "read_when": "session_start",
+      "update_when": "milestone_boundary",
+      "owner": "maintainer"
     }
   ],
   "modules": {

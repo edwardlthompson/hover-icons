@@ -17,6 +17,13 @@
 
 ## Entries
 
+### 2026-09-13 — Hover Icons product + Blender production renderer
+- **Status:** Accepted
+- **Context:** Child repo for a photoreal FOSS icon pack. Bootstrap Golden Path (hello/About) is CI glue. RTX 4090 is available locally; GitHub Actions has no GPU. Catalog may grow to 4000+ icons.
+- **Decision:** Persist the original brief in `AGENT.md` and the BUILD_PLAN Product block. CI uses dry-run JSON. Production renders use Blender/Cycles OptiX with mesh-once material presets. SD/ControlNet deferred; silhouette lock is the mesh.
+- **Alternatives considered:** SDXL+Canny as production (rejected: drift and throughput). Distro Blender (rejected: often no OptiX).
+- **Consequences:** `hello` stays; `iconpack` is the product library; bulk PNGs gitignored; four goldens only.
+
 ### 2026-09-11 — v1.4.0 /ship (template-gap BUILD_PLAN sync)
 - **Status:** Accepted
 - **Context:** Child repos needed Monday automation to list Canon/Mixed/Sacred/feature gaps on BUILD_PLAN without auto-applying Sacred overwrites.

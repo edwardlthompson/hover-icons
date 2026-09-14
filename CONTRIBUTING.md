@@ -1,6 +1,14 @@
 # Contributing
 
-Thank you for contributing to **agent-project-bootstrap** — a FOSS project template for coding agents (Cursor, Windsurf, Antigravity, and others).
+Thank you for contributing to **Hover Icons** — a FOSS photorealistic 3D icon pack (simple 2D icon → same outline in 3D → glossy floating object → tame or neon from one catalog). Product brief: [`AGENT.md`](AGENT.md).
+
+## Icon pack contributions
+
+1. Drop a geometric, transparent SVG in `catalog/sources/{id}.svg`.
+2. Add a YAML block to `catalog/icons.yaml` (description, hex color, tame/neon material strings). Do not free-form a prompt.
+3. Run `python3 scripts/validate_catalog.py`.
+4. Run `python3 scripts/render_icons.py --backend dry-run` (CI). On a CUDA box with official Blender: `--backend blender --quality release`.
+5. Open a PR. Do not commit bulk PNGs; only `renders/golden/` plus JSON sidecars.
 
 ## Who contributes what
 
@@ -12,7 +20,7 @@ Thank you for contributing to **agent-project-bootstrap** — a FOSS project tem
 | `AUTO` | CI/scripts | GitHub Actions, Dependabot, pre-commit |
 ## For coding agents
 
-Read [`AGENTS.md`](AGENTS.md) and [`docs/START_HERE.md`](docs/START_HERE.md) before editing. Run `/build` for the next Sequential row, then `python3 scripts/agent-run.py watch-agent-gates --once --autofix`. Do not `git push` unless a human approved it or the user invoked `/push` or `/ship`. Use Conventional Commits. Do not halt on `[HUMAN]` or `[ADB]` labels — automate first, then backlog.
+Read [`AGENT.md`](AGENT.md), [`AGENTS.md`](AGENTS.md), and [`docs/START_HERE.md`](docs/START_HERE.md) before editing. Run `/build` for the next Sequential row, then `python3 scripts/agent-run.py watch-agent-gates --once --autofix`. Do not `git push` unless a human approved it or the user invoked `/push` or `/ship`. Use Conventional Commits. Do not halt on `[HUMAN]` or `[ADB]` labels — automate first, then backlog.
 
 ## First contribution
 

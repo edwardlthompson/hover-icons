@@ -111,6 +111,12 @@ def render_readme(root: Path, product: dict, *, for_preview: bool = False) -> st
     template = template_path.read_text(encoding="utf-8")
     urls = product["urls"]
     badge = product["badge"]
+    repo = str(urls.get("github_repo") or "OWNER/REPO")
+    if "/" in repo:
+        owner, name = repo.split("/", 1)
+        pages_host = f"{owner}.github.io/{name}"
+    else:
+        pages_host = "example.github.io/repo"
     if for_preview:
         hero_path = "../assets/readme-hero.svg"
         lockup_path = "../assets/logo-lockup.svg"
@@ -155,7 +161,9 @@ def render_readme(root: Path, product: dict, *, for_preview: bool = False) -> st
         "{{url_agents}}": _rel_url("AGENTS.md", from_preview=for_preview),
         "{{url_tour}}": _rel_url("docs/help/TOUR.md", from_preview=for_preview),
         "{{ci_repo}}": str(urls.get("github_repo") or "OWNER/REPO"),
+        "{{pages_host}}": pages_host,
         "{{license_name}}": "MIT License",
+        "{{template_version}}": (root / ".template-version").read_text(encoding="utf-8").strip(),
     }
     out = template
     for key, value in replacements.items():

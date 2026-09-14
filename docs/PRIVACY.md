@@ -26,6 +26,10 @@
 - A self-hosted crash inbox (GlitchTip / Bugsink) is a child escape hatch only — do not enable without a DPIA. Stub: [`CRASH_INBOX.md`](CRASH_INBOX.md)
 - Anonymous intake (GitHub App proxy) is a named follow-up — see [`CRASH_PROXY.md`](CRASH_PROXY.md) — and needs a new DPIA before enable
 
+## Local GPU renderer
+
+Hover Icons does not phone home. Dry-run and catalog validation are local. Optional Blender/Cycles on a developer GPU does not send prompts or images to a network API. Do not add Hugging Face or hosted image backends without a new privacy review.
+
 ## Data We Do Not Collect
 
 - **No GitHub Pages analytics** and **no default product telemetry** — the Pages demo and Golden Path apps ship without trackers (gate: `scripts/check-pages-analytics.sh`). Opt-in only if a child product adds an explicit consent path.

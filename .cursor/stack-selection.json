@@ -1,6 +1,12 @@
 {
+  "stack": "python",
+  "pruned": false,
+  "active_modules": [
+    "python"
+  ],
+  "parallel_scope_note": "Sprint 1 Parallel: Python CLI scope only (`examples/python/**`)",
+  "selected_at": "2026-09-14T00:07:30+00:00",
   "distribution_tier": "foss",
-  "stack": "multi",
   "cursor_features_enabled": [
     "rules",
     "commands",
@@ -26,5 +32,5 @@
     "mcp_commercial_example",
     "android_commercial_patterns"
   ],
-  "cursor_features_synced_at": "2026-08-28T11:29:10+00:00"
+  "cursor_features_synced_at": "2026-09-14T00:07:30+00:00"
 }

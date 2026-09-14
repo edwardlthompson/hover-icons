@@ -1,15 +1,29 @@
 # Build Plan
 
 <!-- remaining-tally -->
-**Remaining:** AGENT 0 · AUTO 0 · HUMAN 1 · ADB 0 · **1 open**
+**Remaining:** AGENT 0 · AUTO 0 · HUMAN 3 · ADB 0 · **3 open**
 <!-- /remaining-tally -->
 
-Live board for **this template repo**. Finished work: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md). Child products use [`BUILD_PLAN_TEMPLATE.md`](BUILD_PLAN_TEMPLATE.md) (copied onto their `BUILD_PLAN.md` at init).
+Live board for Hover Icons. Finished work: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md).
 
 **Who:** `AGENT` code · `HUMAN` person · `ADB` device · `AUTO` CI/scripts
 **State:** 🔲 open · ✅ done · ❌ blocked — reason
 
 Format: `🔲 [AGENT] Short task`. Sequential `[AGENT]` first. Parallel scopes: [`docs/PARALLEL_AGENT_SCOPES.md`](docs/PARALLEL_AGENT_SCOPES.md). `/build` tries HUMAN/ADB after automation; failures go to `HUMAN_BACKLOG.md`.
+
+## Product (do not drift)
+
+Read [`AGENT.md`](AGENT.md) before any sprint row. That file is the original brief. Do not open `docs/INITIALIZATION_PROMPT.md` as the daily product spec.
+
+**One-liner:** Simple 2D icon → same outline in 3D → glossy floating object → tame or neon (and later materials) from one catalog.
+
+**This repo is an icon pack, not the bootstrap Golden Path app.** `examples/python/src/hello/` is CI glue. Do not implement About/donate chrome as the product.
+
+**First milestone:** bootstrap + camera + messages × tame + neon, locked template, repeatable seeds.
+
+**Product rules:** silhouette = classic 2D icon; same camera/lights/backdrop; 15° three-quarter; key 45° upper-left; 1024²; no text; Android-safe padding.
+
+**Never:** free-form prompts; skip the catalog; invent a parallel tree; treat hello CLI as the app.
 
 ## Smoke gate (hard stop)
 
@@ -19,29 +33,85 @@ After the **last** `[AGENT]`/`[AUTO]` row in a sprint is ✅, do **not** start t
 
 ```bash
 python3 scripts/agent-run.py smoke-sprint --require
-
 ```
 
-That command re-smokes **every** ✅ row: no errors or crashes, plus startup time and load order. Details: [`docs/SPRINT_SMOKE.md`](docs/SPRINT_SMOKE.md). Fail → leave the last row open or ❌; fix; re-run. `/gates` wrap-up includes the same check.
+Details: [`docs/SPRINT_SMOKE.md`](docs/SPRINT_SMOKE.md). Fail → leave the last row open or ❌; fix; re-run.
 
 ---
 
-## Template Maintainer
+## Product sprints
 
-**Now:** **v1.4.0** shipped. **M61** archived · next allideas batch when ready. Open PRs + Template gaps sync below. After Cloud work, `/resume`. Child model: [`BUILD_PLAN_TEMPLATE.md`](BUILD_PLAN_TEMPLATE.md).
+### Sprint 0 — Customize
 
-> **v1.4.0** release archived in COMPLETED_TASKS.md @ `f105c3b`.
-> **v1.3.0** release archived in COMPLETED_TASKS.md @ `7ca6dbf`.
-> **M61** archived in COMPLETED_TASKS.md @ `ca0edfb`.
-> **M60** archived in COMPLETED_TASKS.md @ `ca0edfb`.
-> **M59** archived in COMPLETED_TASKS.md @ `ca0edfb`.
-> **M58** archived in COMPLETED_TASKS.md @ `ca0edfb`.
-> **M57** archived in COMPLETED_TASKS.md @ `e65513d`. Nav smoke ADB archived 2026-09-10.
-> **Waiting HUMAN/ADB auto** archived in COMPLETED_TASKS.md @ `ca0edfb`.
+<!-- agent_count_target: 2 -->
+
+### Sequential (must complete in order)
+
+1. ✅ [AGENT] Clone bootstrap, rename `origin` to `bootstrap-upstream`, write `AGENT.md` verbatim, run non-interactive python init (no prune)
+2. ✅ [AGENT] Restamp BUILD_PLAN Product block, `docs/spec.md`, `AGENTS.md` pointer, `.cursor/rules/product.mdc`, `AGENT_MEMORY.md`
+
+### Parallel (safe after Sequential step 2)
+
+| Task | Owner | Isolated scope |
+|------|-------|----------------|
+| Product-brief CI check | AGENT | `scripts/check-product-brief.sh` |
+| Cursor product rule | AGENT | `.cursor/rules/product.mdc` |
+
+### Sprint 1 — Catalog lock
+
+<!-- agent_count_target: 2 -->
+
+### Sequential (must complete in order)
+
+1. ✅ [AGENT] Lock `catalog/icons.yaml` with camera and messages plus verbatim `prompts/template.txt` and `prompts/negative.txt`
+
+### Parallel (safe after Sequential step 1)
+
+| Task | Owner | Isolated scope |
+|------|-------|----------------|
+| Geometric CC0 SVGs | AGENT | `catalog/sources/` |
+| Asset license + style docs | AGENT | `LICENSE-ASSETS.md` |
+
+### Sprint 2 — Dry-run renderer
+
+<!-- agent_count_target: 2 -->
+
+### Sequential (must complete in order)
+
+1. ✅ [AGENT] Lock `iconpack` job schema: fill slots only, seed hash, neon negative strip
+
+### Parallel (safe after Sequential step 1)
+
+| Task | Owner | Isolated scope |
+|------|-------|----------------|
+| Dry-run backend + CLIs | AGENT | `scripts/render_icons.py` |
+| Catalog validate + tests | AGENT | `examples/python/tests/test_iconpack.py` |
+
+### Sprint 3 — 4090 goldens
+
+<!-- agent_count_target: 2 -->
+
+### Sequential (must complete in order)
+
+1. ✅ [AGENT] Lock Blender scene contract in `scripts/blender_batch.py` (15° camera, 45° key, 1024, padding)
+
+### Parallel (safe after Sequential step 1)
+
+| Task | Owner | Isolated scope |
+|------|-------|----------------|
+| Mesh cache + tame/neon materials | AGENT | `meshes/` |
+| Render backend docs | AGENT | `docs/RENDER_BACKEND.md` |
+
+### Waiting on a person
+
+1. 🔲 [HUMAN] Create the GitHub product repo; do not push to `bootstrap-upstream`
+2. 🔲 [HUMAN] Run `scripts/setup-github-repo.sh` and enable Dependabot alerts
+3. ✅ [HUMAN] Install official Blender 4.2+ with OptiX; set `BLENDER_BIN` in `.env`
+4. 🔲 [HUMAN] Bookmark [`docs/help/BATCH_COMMANDS.md`](docs/help/BATCH_COMMANDS.md)
 
 ### Open PRs (synced)
 
-> Auto-managed. Do not hand-edit rows inside the markers. Run `python3 scripts/agent-run.py sync-open-prs-build-plan -- --apply` (or `/resume` / `/dependabot`).
+> Auto-managed on product repos too. Do not hand-edit rows inside the markers.
 
 <!-- open-prs-sync:begin -->
 _No open Dependabot or Release Please PRs._
@@ -55,24 +125,14 @@ _No open Dependabot or Release Please PRs._
 _No template gaps; .template-version matches upstream (or template maintainer N/A)._
 <!-- template-gaps-sync:end -->
 
-### Waiting on a person
-
-1. 🔲 [HUMAN] Lightroom Plug-in Manager load smoke (#29)
-
-Done on this board: **v1.4.0** · **v1.3.0** · **M61** back/nav/gates · **M60** CI clarity · **M59** CI harden · **M58** ship CI + Espresso · **M57** Cursor + docs · **M56** desktop packaging · **M55** CI / security · **M54** catalog / Lightroom · **M53** Android distribution · **M52** UI / a11y / nav · **M51** CLI / API · **M50** chrome follow-through · **M49** Settings-only chrome · **M48** R8 + memory (#95 on `main`) · **M47** Cline + nav. Archive: `COMPLETED_TASKS.md`.
-
 ---
 
 ## Ongoing Maintenance
 
-Not a checklist. GitHub Monday 07:00 UTC (`.github/workflows/weekly-health-check.yml`) already runs CI wait, security triage, upgrade-sim (template) or parent template-gap BUILD_PLAN sync (child), radar, `update-deps` dry-run, Dependabot leftover list, open-PR BUILD_PLAN sync, and latest-release SBOM. `/ship` owns pre-release and the release tag.
-
-Open Dependabot / Release Please PRs are mirrored into **Open PRs (synced)** above; child catch-up rows land in **Template gaps (synced)** — allowed board automation, not standing chore rows. After Cloud Agents, use `/resume` on This Computer.
-
-If Monday cron is red: Cursor Automation `weekly-maintain`, then Grok Bot 4–5. Do not put those chores back on this board. [`docs/GROK_BOTS.md`](docs/GROK_BOTS.md) · [`docs/CURSOR_AUTOMATIONS.commercial.md`](docs/CURSOR_AUTOMATIONS.commercial.md)
+Not a checklist. GitHub Monday cron (`.github/workflows/weekly-health-check.yml`) already runs CI wait, security triage, parent template-gap BUILD_PLAN sync, radar, `update-deps` dry-run, Dependabot leftover list, open-PR BUILD_PLAN sync, and latest-release SBOM. `/ship` owns pre-release and the release tag.
 
 ---
 
 ## Archive
 
-Older sprints and releases: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md).
+Older sprints: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md).
