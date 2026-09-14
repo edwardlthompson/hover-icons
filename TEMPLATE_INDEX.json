@@ -1,5 +1,5 @@
 {
-  "template_version": "1.0.0",
+  "template_version": "1.1.0",
   "project": {
     "name": "Hover Icons",
     "purpose": "FOSS photorealistic 3D icon pack from a locked YAML catalog and prompt template. Simple 2D icon to same outline in 3D to glossy floating object; tame or neon from one catalog; not a Golden Path app.",
