@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-2ea043?style=flat-square" alt="MIT" />
-  <img src="https://img.shields.io/badge/template-1.0.0-0969da?style=flat-square" alt="template" />
+  <img src="https://img.shields.io/badge/template-1.1.0-0969da?style=flat-square" alt="template" />
   <img src="https://img.shields.io/badge/FOSS-no_tracking-656d76?style=flat-square" alt="FOSS" />
   <a href="https://github.com/edwardlthompson/hover-icons/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/edwardlthompson/hover-icons/ci.yml?style=flat-square&label=CI" alt="CI" /></a>
   <a href="https://edwardlthompson.github.io/hover-icons/"><img src="https://img.shields.io/badge/Pages-demo-0969da?style=flat-square" alt="Pages demo" /></a>
