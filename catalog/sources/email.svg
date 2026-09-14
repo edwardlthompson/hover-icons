@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <!-- Classic envelope. Body plus flap as separate fills. CC0. -->
+  <rect x="40" y="72" width="176" height="112" rx="20" fill="#FF9800"/>
+  <path fill="#FF9800" d="M52 84l76 64 76-64-14-10-62 52-62-52z"/>
+</svg>

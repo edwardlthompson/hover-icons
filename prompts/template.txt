@@ -1,6 +1,6 @@
 Photorealistic 3D render of a single [ICON_DESCRIPTION], colored [COLOR], [MATERIAL_AND_EFFECT].
-The object is a slightly extruded, beveled version of the classic simple 2D icon, keeping the exact silhouette and proportions.
-It floats in mid-air at a gentle 15-degree angle, three-quarter view, facing slightly toward the camera.
-Studio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless light-gray backdrop.
+The object is bent from round tubing along the classic 2D silhouette, with an empty middle and no filled face, keeping the exact outline and proportions.
+It floats in mid-air at a gentle 15-degree look-down, three-quarter view from the right (front and right side visible, facing slightly left).
+Studio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless dark studio backdrop.
 Highly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.
 8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.

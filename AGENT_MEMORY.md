@@ -7,8 +7,6 @@
 
 | Layer | Technology | Version | Notes |
 |-------|-----------|---------|-------|
-| Layer | Technology | Version | Notes |
-|-------|-----------|---------|-------|
 | Platform | Python catalog + optional local Blender/Cycles | 0.1.0 | Child of agent-project-bootstrap 1.4.0 |
 | License | MIT code; CC0 SVGs and generated PNGs | - | See LICENSE-ASSETS.md |
 | Distribution | GitHub; golden PNGs in renders/golden | - | Bulk renders gitignored |
@@ -36,7 +34,7 @@
 
 ### Project Purpose
 
-**Hover Icons** / pack `photoreal-simple-icons`. Simple 2D icon → same outline in 3D → glossy floating object → tame or neon (and later materials) from one catalog. First milestone: camera + messages × tame + neon. Do not implement Golden Path About/donate as the product.
+**Hover Icons** / pack `photoreal-simple-icons`. Simple 2D icon → same outline in 3D → glossy floating object → tame or neon (and later materials) from one catalog. Goldens: camera, messages, phone, email × tame + neon as outline tubes. Catalog also has home/heart plus glass/metal/ceramic JSON. Do not implement Golden Path About/donate as the product.
 
 Canon: `AGENT.md`. Board: `BUILD_PLAN.md` Product (do not drift) block. CI backend: dry-run. Production renderer: Blender/Cycles OptiX on the local RTX 4090.
 
@@ -54,6 +52,7 @@ Golden Path Settings/About/Feedback are a route stack, not three booleans. Web H
 
 ## Session Retrospectives
 
+| 2026-09-13 | /build Sprint 4 | home+heart catalog; glass/metal/ceramic presets; smoked and archived | Do not merge RP 1.0.0 until `/ship`; extra goldens stay gitignored |
 | 2026-09-11 | v1.4.0 /ship | Monday child template-gap BUILD_PLAN sync; RP #107; patch/minor deps; leave CodeQL `@v4` | Plan-only gaps; Sacred stays HUMAN; no silent `/upgrade` apply |
 | 2026-09-11 | v1.3.0 /push | RP #106 admin-merged; tag+release live; CI green after TBT + instrumented soft skips | Lightroom (#29) stays HUMAN; do not use JUnit Assume on connectedAndroidTest |
 | 2026-09-10 | M58–M61 /build | Espresso 3.7 + agent DX; M58–M61 archived; KB-023 path spaces; Release Please #106 open | Do not fold Unreleased until /push+/ship; merge RP is HUMAN |

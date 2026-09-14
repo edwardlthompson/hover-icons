@@ -36,8 +36,8 @@ idx.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="
 readme = Path("README.md")
 text = readme.read_text(encoding="utf-8")
 text = re.sub(
-    r"!\[Template\]\(https://img\.shields\.io/badge/template-[\d.]+",
-    f"![Template](https://img.shields.io/badge/template-{version}",
+    r"(https://img\.shields\.io/badge/template-)[\d.]+",
+    rf"\g<1>{version}",
     text,
 )
 text = re.sub(
@@ -45,7 +45,7 @@ text = re.sub(
     f"Current template version: **{version}**",
     text,
 )
-readme.write_text(text, encoding="utf-8")
+readme.write_text(text, encoding="utf-8", newline="\n")
 
 mem = Path("AGENT_MEMORY.md")
 mt = mem.read_text(encoding="utf-8")

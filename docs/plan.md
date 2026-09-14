@@ -12,11 +12,10 @@
 | Dry-run render jobs + seeds | AGENT | `uv run pytest` in `examples/python` |
 | Catalog CI job | AUTO | `.github/workflows/ci.yml` catalog job |
 | Blender/Cycles OptiX goldens | AGENT | Local `--backend blender`; CI does not run this |
-
 ## Next feature
 
-1. Keep adding icons only via YAML + SVG.
-2. Add material presets (glass, metal, ceramic) as extra effect folders on cached meshes.
+1. ✅ Add icons only via YAML + SVG (`home`, `heart`).
+2. ✅ Add material presets (glass, metal, ceramic) as extra effect folders on cached meshes.
 3. Run `python3 scripts/agent-run.py watch-agent-gates --once --autofix`
 
 If automated tests are not feasible, write the justification and fallback command in the feature spec before marking the BUILD_PLAN row ✅.

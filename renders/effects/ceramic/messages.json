@@ -1,0 +1,19 @@
+{
+  "icon_id": "messages",
+  "effect": "ceramic",
+  "seed": 2064720089,
+  "prompt": "Photorealistic 3D render of a single classic rounded speech-bubble with a small triangular tail, solid blue, colored #2196F3, glazed ceramic matching the catalog color, soft specular, no glow.\nThe object is a slightly extruded, beveled version of the classic simple 2D icon, keeping the exact silhouette and proportions.\nIt floats in mid-air at a gentle 15-degree angle, three-quarter view, facing slightly toward the camera.\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless light-gray backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
+  "negative": "flat, 2D, cartoon, illustration, sketch, low poly, deformed, extra limbs, text, watermark, logo, multiple objects, busy background, oversaturated, neon glow, blurry, noisy, cropped, out of frame",
+  "source": "catalog/sources/messages.svg",
+  "png_path": "renders/effects/ceramic/messages.png",
+  "json_path": "renders/effects/ceramic/messages.json",
+  "golden_path": "renders/golden/messages_ceramic.png",
+  "mesh_path": "meshes/messages.glb",
+  "color": "#2196F3",
+  "material": "glazed ceramic matching the catalog color, soft specular, no glow",
+  "controlnet_type": "canny",
+  "controlnet_weight": 0.75,
+  "resolution": 1024,
+  "catalog_commit": "b1b72f8218d479fa09b126a491eb5a23c29c08aa",
+  "scene_hash": "hover-icons-scene-v1-15deg-45key-1024-pad"
+}

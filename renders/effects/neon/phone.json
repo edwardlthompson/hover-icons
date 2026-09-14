@@ -1,0 +1,23 @@
+{
+  "icon_id": "phone",
+  "effect": "neon",
+  "seed": 1297208235,
+  "prompt": "Photorealistic 3D render of a single classic smartphone: rounded rectangle body, inner screen rectangle, colored #009688, teal neon gas in outline tubes, empty middle, never white.\nThe object is bent from round tubing along the classic 2D silhouette, with an empty middle and no filled face, keeping the exact outline and proportions.\nIt floats in mid-air at a gentle 15-degree look-down, three-quarter view from the right (front and right side visible, facing slightly left).\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless dark studio backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
+  "negative": "flat, 2D, cartoon, illustration, sketch, low poly, deformed, extra limbs, text, watermark, logo, multiple objects, busy background, oversaturated, blurry, noisy, cropped, out of frame",
+  "source": "catalog/sources/phone.svg",
+  "png_path": "renders/effects/neon/phone.png",
+  "json_path": "renders/effects/neon/phone.json",
+  "golden_path": "renders/golden/phone_neon.png",
+  "mesh_path": "meshes/phone.glb",
+  "color": "#009688",
+  "material": "teal neon gas in outline tubes, empty middle, never white",
+  "controlnet_type": "canny",
+  "controlnet_weight": 0.75,
+  "resolution": 1024,
+  "catalog_commit": "b1b72f8218d479fa09b126a491eb5a23c29c08aa",
+  "scene_hash": "hover-icons-scene-v19-neon-bloom-1024",
+  "root": "/home/edward/Repo/Hover Icons",
+  "quality": "release",
+  "cycles_device": "OPTIX",
+  "blender": "4.5.3 LTS"
+}

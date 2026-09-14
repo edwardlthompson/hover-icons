@@ -2,7 +2,7 @@
   "icon_id": "messages",
   "effect": "neon",
   "seed": 1275433424,
-  "prompt": "Photorealistic 3D render of a single classic rounded speech-bubble with a small triangular tail, solid blue, colored #2196F3, same plastic but with a thin inner emissive glow along the edges, faint bloom, still readable blue.\nThe object is a slightly extruded, beveled version of the classic simple 2D icon, keeping the exact silhouette and proportions.\nIt floats in mid-air at a gentle 15-degree angle, three-quarter view, facing slightly toward the camera.\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless light-gray backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
+  "prompt": "Photorealistic 3D render of a single classic rounded speech-bubble outline with a small tail, empty middle, colored #2196F3, blue neon gas in outline tubes, empty middle, never white.\nThe object is bent from round tubing along the classic 2D silhouette, with an empty middle and no filled face, keeping the exact outline and proportions.\nIt floats in mid-air at a gentle 15-degree look-down, three-quarter view from the right (front and right side visible, facing slightly left).\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless dark studio backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
   "negative": "flat, 2D, cartoon, illustration, sketch, low poly, deformed, extra limbs, text, watermark, logo, multiple objects, busy background, oversaturated, blurry, noisy, cropped, out of frame",
   "source": "catalog/sources/messages.svg",
   "png_path": "renders/effects/neon/messages.png",
@@ -10,10 +10,14 @@
   "golden_path": "renders/golden/messages_neon.png",
   "mesh_path": "meshes/messages.glb",
   "color": "#2196F3",
-  "material": "same plastic but with a thin inner emissive glow along the edges, faint bloom, still readable blue",
+  "material": "blue neon gas in outline tubes, empty middle, never white",
   "controlnet_type": "canny",
   "controlnet_weight": 0.75,
   "resolution": 1024,
-  "catalog_commit": "0805ffea511e31b444f22a33386ef1177f7a4ad6",
-  "scene_hash": "hover-icons-scene-v1-15deg-45key-1024-pad"
+  "catalog_commit": "b1b72f8218d479fa09b126a491eb5a23c29c08aa",
+  "scene_hash": "hover-icons-scene-v19-neon-bloom-1024",
+  "root": "/home/edward/Repo/Hover Icons",
+  "quality": "release",
+  "cycles_device": "OPTIX",
+  "blender": "4.5.3 LTS"
 }

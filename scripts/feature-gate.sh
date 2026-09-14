@@ -339,7 +339,7 @@ if should_run python && [ -f examples/python/pyproject.toml ]; then
     run_in_dir examples/python python-type-mypy uv run mypy src
     run_in_dir examples/python python-type-pyright uv run pyright
     run_in_dir examples/python python-test uv run pytest -q
-    run_cmd catalog-validate bash scripts/validate_catalog.py
+    run_cmd catalog-validate "$PY" scripts/validate_catalog.py
     run_cmd product-brief bash scripts/check-product-brief.sh
   fi
 fi

@@ -9,7 +9,7 @@ import pytest
 
 from iconpack.catalog import CatalogError, load_catalog
 from iconpack.cli import render_main, validate_main
-from iconpack.jobs import build_jobs, should_skip
+from iconpack.jobs import build_jobs, effect_order, should_skip
 from iconpack.mesh_normalize import normalize_scale, padded_camera_distance, viewbox_size
 from iconpack.prompt import fill_template, negative_for_effect
 from iconpack.seed import seed_for
@@ -41,7 +41,19 @@ def test_seed_stable() -> None:
 def test_load_real_catalog() -> None:
     catalog = load_catalog(REPO / "catalog" / "icons.yaml", root=REPO)
     assert catalog.pack.name == "photoreal-simple-icons"
-    assert [icon.id for icon in catalog.icons] == ["camera", "messages"]
+    assert [icon.id for icon in catalog.icons] == [
+        "camera",
+        "messages",
+        "home",
+        "heart",
+        "phone",
+        "email",
+    ]
+    for icon in catalog.icons:
+        assert set(icon.effects) >= {"tame", "neon", "glass", "metal", "ceramic"}
+    for icon_id in ("home", "heart", "phone", "email"):
+        svg = (REPO / "catalog" / "sources" / f"{icon_id}.svg").read_text(encoding="utf-8")
+        assert viewbox_size(svg) == (256.0, 256.0)
 
 
 def test_missing_source(tmp_path: Path) -> None:
@@ -59,20 +71,20 @@ def test_job_png_paths_and_order() -> None:
     negative = (REPO / "prompts" / "negative.txt").read_text(encoding="utf-8")
     jobs = build_jobs(REPO, catalog, template, negative)
     assert [(j.icon_id, j.effect) for j in jobs] == [
-        ("camera", "tame"),
-        ("camera", "neon"),
-        ("messages", "tame"),
-        ("messages", "neon"),
+        (icon.id, name) for icon in catalog.icons for name in effect_order(icon.effects)
     ]
     assert jobs[0].png_path == "renders/base/camera.png"
     assert jobs[1].png_path == "renders/effects/neon/camera.png"
+    assert any(j.png_path == "renders/effects/glass/camera.png" for j in jobs)
+    assert any(j.png_path == "renders/effects/metal/home.png" for j in jobs)
+    assert any(j.png_path == "renders/effects/ceramic/heart.png" for j in jobs)
 
 
 def test_unknown_effect_filter() -> None:
     catalog = load_catalog(REPO / "catalog" / "icons.yaml", root=REPO)
     template = (REPO / "prompts" / "template.txt").read_text(encoding="utf-8")
     negative = (REPO / "prompts" / "negative.txt").read_text(encoding="utf-8")
-    jobs = build_jobs(REPO, catalog, template, negative, effects={"glass"})
+    jobs = build_jobs(REPO, catalog, template, negative, effects={"wood"})
     assert jobs == []
 
 

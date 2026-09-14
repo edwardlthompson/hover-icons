@@ -2,6 +2,42 @@
 
 > Archive of finished BUILD_PLAN items.
 
+## Sprint 4 — More icons and materials (2026-09-13)
+
+- ✅ [AGENT] Add the next icons only via `catalog/icons.yaml` and `catalog/sources/`
+- ✅ [AGENT] Add glass, metal, and ceramic effect presets on cached meshes (`docs/RENDER_BACKEND.md`)
+
+## First catalog — Sprints 0–3 (2026-09-13)
+
+### Sprint 0 — Customize
+
+- ✅ [AGENT] Clone bootstrap, rename `origin` to `bootstrap-upstream`, write `AGENT.md` verbatim, run non-interactive python init (no prune)
+- ✅ [AGENT] Restamp BUILD_PLAN Product block, `docs/spec.md`, `AGENTS.md` pointer, `.cursor/rules/product.mdc`, `AGENT_MEMORY.md`
+- ✅ [AGENT] Product-brief CI check (`scripts/check-product-brief.sh`)
+- ✅ [AGENT] Cursor product rule (`.cursor/rules/product.mdc`)
+
+### Sprint 1 — Catalog lock
+
+- ✅ [AGENT] Lock `catalog/icons.yaml` with camera and messages plus verbatim `prompts/template.txt` and `prompts/negative.txt`
+- ✅ [AGENT] Geometric CC0 SVGs (`catalog/sources/`)
+- ✅ [AGENT] Asset license + style docs (`LICENSE-ASSETS.md`)
+
+### Sprint 2 — Dry-run renderer
+
+- ✅ [AGENT] Lock `iconpack` job schema: fill slots only, seed hash, neon negative strip
+- ✅ [AGENT] Dry-run backend + CLIs (`scripts/render_icons.py`)
+- ✅ [AGENT] Catalog validate + tests (`examples/python/tests/test_iconpack.py`)
+
+### Sprint 3 — 4090 goldens
+
+- ✅ [AGENT] Lock Blender scene contract in `scripts/blender_batch.py` (15° camera, 45° key, 1024, padding)
+- ✅ [AGENT] Mesh cache + tame/neon materials (`meshes/`)
+- ✅ [AGENT] Render backend docs (`docs/RENDER_BACKEND.md`)
+- ✅ [AUTO] Create the GitHub product repo hover-icons as origin; do not push to bootstrap-upstream
+- ✅ [AUTO] Run `scripts/setup-github-repo.sh` and enable Dependabot alerts
+- ✅ [HUMAN] Install official Blender 4.2+ with OptiX; set `BLENDER_BIN` in `.env`
+- ✅ [AUTO] Opened [`docs/help/BATCH_COMMANDS.md`](docs/help/BATCH_COMMANDS.md) in the IDE (cheat sheet is in-repo; `/tour` keeps it discoverable)
+
 ## v1.4.0 release (2026-09-11)
 
 - ✅ [AGENT] Merge release [#107](https://github.com/edwardlthompson/agent-project-bootstrap/pull/107) (chore(main): release 1.4.0)

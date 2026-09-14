@@ -2,7 +2,7 @@
   "icon_id": "camera",
   "effect": "tame",
   "seed": 1757076445,
-  "prompt": "Photorealistic 3D render of a single classic simple camera: rounded rectangle body, large circular lens, small viewfinder bump on top, colored #424242, satin plastic with a soft gloss, subtle studio reflections.\nThe object is a slightly extruded, beveled version of the classic simple 2D icon, keeping the exact silhouette and proportions.\nIt floats in mid-air at a gentle 15-degree angle, three-quarter view, facing slightly toward the camera.\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless light-gray backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
+  "prompt": "Photorealistic 3D render of a single classic simple camera: rounded rectangle body, large circular lens, small viewfinder bump on top, colored #424242, satin outline tubes, empty middle, soft gloss.\nThe object is bent from round tubing along the classic 2D silhouette, with an empty middle and no filled face, keeping the exact outline and proportions.\nIt floats in mid-air at a gentle 15-degree look-down, three-quarter view from the right (front and right side visible, facing slightly left).\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless dark studio backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
   "negative": "flat, 2D, cartoon, illustration, sketch, low poly, deformed, extra limbs, text, watermark, logo, multiple objects, busy background, oversaturated, neon glow, blurry, noisy, cropped, out of frame",
   "source": "catalog/sources/camera.svg",
   "png_path": "renders/base/camera.png",
@@ -10,10 +10,10 @@
   "golden_path": "renders/golden/camera_tame.png",
   "mesh_path": "meshes/camera.glb",
   "color": "#424242",
-  "material": "satin plastic with a soft gloss, subtle studio reflections",
+  "material": "satin outline tubes, empty middle, soft gloss",
   "controlnet_type": "canny",
   "controlnet_weight": 0.75,
   "resolution": 1024,
-  "catalog_commit": "0805ffea511e31b444f22a33386ef1177f7a4ad6",
-  "scene_hash": "hover-icons-scene-v1-15deg-45key-1024-pad"
+  "catalog_commit": "b1b72f8218d479fa09b126a491eb5a23c29c08aa",
+  "scene_hash": "hover-icons-scene-v19-neon-bloom-1024"
 }

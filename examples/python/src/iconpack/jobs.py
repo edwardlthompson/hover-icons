@@ -13,7 +13,7 @@ from iconpack.prompt import fill_template, negative_for_effect
 from iconpack.seed import seed_for
 
 PREFERRED_EFFECTS = ("tame", "neon")
-SCENE_HASH = "hover-icons-scene-v1-15deg-45key-1024-pad"
+SCENE_HASH = "hover-icons-scene-v19-neon-bloom-1024"
 
 
 @dataclass(frozen=True)

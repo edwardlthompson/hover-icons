@@ -32,6 +32,11 @@ class ReadmeBadgesTests(unittest.TestCase):
         text = (ROOT / "scripts" / "validate-bootstrap.sh").read_text(encoding="utf-8")
         self.assertIn("check-readme-badges.sh", text)
 
+    def test_sync_rewrites_html_template_badge(self) -> None:
+        text = (ROOT / "scripts" / "sync-template-version.sh").read_text(encoding="utf-8")
+        self.assertIn("badge/template-", text)
+        self.assertIn(r"\g<1>", text)
+
 
 if __name__ == "__main__":
     unittest.main()

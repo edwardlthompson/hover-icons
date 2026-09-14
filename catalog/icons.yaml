@@ -1,7 +1,7 @@
 pack:
   name: photoreal-simple-icons
   camera: "15-degree three-quarter, floating"
-  backdrop: "infinite seamless light-gray"
+  backdrop: "infinite seamless dark studio"
   resolution: 1024
   controlnet:
     type: canny
@@ -15,16 +15,92 @@ icons:
     color: "#424242"
     effects:
       tame:
-        material: "satin plastic with a soft gloss, subtle studio reflections"
+        material: "satin outline tubes, empty middle, soft gloss"
       neon:
-        material: "same plastic but with a thin inner emissive glow along the edges and lens rim, faint bloom, still readable"
+        material: "gray neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"
 
   - id: messages
     source: catalog/sources/messages.svg
-    description: "classic rounded speech-bubble with a small triangular tail, solid blue"
+    description: "classic rounded speech-bubble outline with a small tail, empty middle"
     color: "#2196F3"
     effects:
       tame:
-        material: "satin plastic with a soft gloss, subtle studio reflections"
+        material: "satin outline tubes, empty middle, soft gloss"
       neon:
-        material: "same plastic but with a thin inner emissive glow along the edges, faint bloom, still readable blue"
+        material: "blue neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"
+
+  - id: home
+    source: catalog/sources/home.svg
+    description: "classic simple house: triangular roof, rectangular body, small door"
+    color: "#4CAF50"
+    effects:
+      tame:
+        material: "satin outline tubes, empty middle, soft gloss"
+      neon:
+        material: "green neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"
+
+  - id: heart
+    source: catalog/sources/heart.svg
+    description: "classic heart silhouette, solid pink, one closed outline"
+    color: "#E91E63"
+    effects:
+      tame:
+        material: "satin outline tubes, empty middle, soft gloss"
+      neon:
+        material: "pink neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"
+
+  - id: phone
+    source: catalog/sources/phone.svg
+    description: "classic smartphone: rounded rectangle body, inner screen rectangle"
+    color: "#009688"
+    effects:
+      tame:
+        material: "satin outline tubes, empty middle, soft gloss"
+      neon:
+        material: "teal neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"
+
+  - id: email
+    source: catalog/sources/email.svg
+    description: "classic envelope outline with a V flap, empty middle"
+    color: "#FF9800"
+    effects:
+      tame:
+        material: "satin outline tubes, empty middle, soft gloss"
+      neon:
+        material: "orange neon gas in outline tubes, empty middle, never white"
+      glass:
+        material: "clear tinted glass, sharp refraction, catalog color as a light tint, no glow"
+      metal:
+        material: "brushed metal matching the catalog color, tight studio highlights, no glow"
+      ceramic:
+        material: "glazed ceramic matching the catalog color, soft specular, no glow"

@@ -19,9 +19,9 @@ Read [`AGENT.md`](AGENT.md) before any sprint row. That file is the original bri
 
 **This repo is an icon pack, not the bootstrap Golden Path app.** `examples/python/src/hello/` is CI glue. Do not implement About/donate chrome as the product.
 
-**First milestone:** bootstrap + camera + messages × tame + neon, locked template, repeatable seeds.
+**First milestone (done):** camera + messages × tame + neon, locked template, repeatable seeds. Goldens: `renders/golden/`.
 
-**Product rules:** silhouette = classic 2D icon; same camera/lights/backdrop; 15° three-quarter; key 45° upper-left; 1024²; no text; Android-safe padding.
+**Product rules:** silhouette = classic 2D icon; **contrast is king** (glanceable; neon = edge tube only); same camera/lights/backdrop; Apple 15° look-down / 30° right three-quarter (faces slightly left); key 45° upper-left; 1024²; no text; Android-safe padding.
 
 **Never:** free-form prompts; skip the catalog; invent a parallel tree; treat hello CLI as the app.
 
@@ -29,87 +29,22 @@ Read [`AGENT.md`](AGENT.md) before any sprint row. That file is the original bri
 
 After every `[AGENT]` row: `python3 scripts/agent-run.py watch-agent-gates --once --autofix --scope auto`
 
-After the **last** `[AGENT]`/`[AUTO]` row in a sprint is ✅, do **not** start the next sprint until this exits 0:
+After the last `[AGENT]`/`[AUTO]` row in a sprint is ✅:
 
 ```bash
 python3 scripts/agent-run.py smoke-sprint --require
+
 ```
 
-Details: [`docs/SPRINT_SMOKE.md`](docs/SPRINT_SMOKE.md). Fail → leave the last row open or ❌; fix; re-run.
+Details: [`docs/SPRINT_SMOKE.md`](docs/SPRINT_SMOKE.md). Fail → leave the last row 🔲 or ❌; fix; re-run.
 
 ---
 
-## Product sprints
-
-### Sprint 0 — Customize
-
-<!-- agent_count_target: 2 -->
-
-### Sequential (must complete in order)
-
-1. ✅ [AGENT] Clone bootstrap, rename `origin` to `bootstrap-upstream`, write `AGENT.md` verbatim, run non-interactive python init (no prune)
-2. ✅ [AGENT] Restamp BUILD_PLAN Product block, `docs/spec.md`, `AGENTS.md` pointer, `.cursor/rules/product.mdc`, `AGENT_MEMORY.md`
-
-### Parallel (safe after Sequential step 2)
-
-| Task | Owner | Isolated scope |
-|------|-------|----------------|
-| Product-brief CI check | AGENT | `scripts/check-product-brief.sh` |
-| Cursor product rule | AGENT | `.cursor/rules/product.mdc` |
-
-### Sprint 1 — Catalog lock
-
-<!-- agent_count_target: 2 -->
-
-### Sequential (must complete in order)
-
-1. ✅ [AGENT] Lock `catalog/icons.yaml` with camera and messages plus verbatim `prompts/template.txt` and `prompts/negative.txt`
-
-### Parallel (safe after Sequential step 1)
-
-| Task | Owner | Isolated scope |
-|------|-------|----------------|
-| Geometric CC0 SVGs | AGENT | `catalog/sources/` |
-| Asset license + style docs | AGENT | `LICENSE-ASSETS.md` |
-
-### Sprint 2 — Dry-run renderer
-
-<!-- agent_count_target: 2 -->
-
-### Sequential (must complete in order)
-
-1. ✅ [AGENT] Lock `iconpack` job schema: fill slots only, seed hash, neon negative strip
-
-### Parallel (safe after Sequential step 1)
-
-| Task | Owner | Isolated scope |
-|------|-------|----------------|
-| Dry-run backend + CLIs | AGENT | `scripts/render_icons.py` |
-| Catalog validate + tests | AGENT | `examples/python/tests/test_iconpack.py` |
-
-### Sprint 3 — 4090 goldens
-
-<!-- agent_count_target: 2 -->
-
-### Sequential (must complete in order)
-
-1. ✅ [AGENT] Lock Blender scene contract in `scripts/blender_batch.py` (15° camera, 45° key, 1024, padding)
-
-### Parallel (safe after Sequential step 1)
-
-| Task | Owner | Isolated scope |
-|------|-------|----------------|
-| Mesh cache + tame/neon materials | AGENT | `meshes/` |
-| Render backend docs | AGENT | `docs/RENDER_BACKEND.md` |
-
-### Waiting on a person
-
-1. ✅ [AUTO] Create the GitHub product repo (`edwardlthompson/hover-icons`); do not push to `bootstrap-upstream`
-2. ✅ [AUTO] Run `scripts/setup-github-repo.sh` and enable Dependabot alerts
-3. ✅ [HUMAN] Install official Blender 4.2+ with OptiX; set `BLENDER_BIN` in `.env`
-4. ✅ [AUTO] Opened [`docs/help/BATCH_COMMANDS.md`](docs/help/BATCH_COMMANDS.md) in the IDE (cheat sheet is in-repo; `/tour` keeps it discoverable)
+## Next
 
 ### Open PRs (synced)
+
+<!-- parallel_exception: auto-synced GitHub PRs; not a parallel AGENT split -->
 
 > Auto-managed on product repos too. Do not hand-edit rows inside the markers.
 
@@ -135,4 +70,14 @@ Not a checklist. GitHub Monday cron (`.github/workflows/weekly-health-check.yml`
 
 ## Archive
 
-Older sprints: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md).
+> **Sprints 0–3** archived in COMPLETED_TASKS.md @ `b1b72f8`.
+> **Sprint 4** archived in COMPLETED_TASKS.md @ `b1b72f8` (local catalog follow-on).
+
+| Sprint | Complete | Archive |
+|--------|----------|---------|
+| 0 Customize | 2026-09-13 | [COMPLETED_TASKS.md](COMPLETED_TASKS.md) |
+| 1 Catalog lock | 2026-09-13 | [COMPLETED_TASKS.md](COMPLETED_TASKS.md) |
+| 2 Dry-run renderer | 2026-09-13 | [COMPLETED_TASKS.md](COMPLETED_TASKS.md) |
+| 3 4090 goldens | 2026-09-13 | [COMPLETED_TASKS.md](COMPLETED_TASKS.md) |
+| 4 More icons and materials | 2026-09-13 | [COMPLETED_TASKS.md](COMPLETED_TASKS.md) |
+Template Lightroom leftover stays in [`HUMAN_BACKLOG.md`](HUMAN_BACKLOG.md); it is not this pack.

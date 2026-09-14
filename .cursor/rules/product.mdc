@@ -9,6 +9,8 @@ Read [`AGENT.md`](AGENT.md) first, then the **Product (do not drift)** block in 
 
 **One-liner:** Simple 2D icon → same outline in 3D → glossy floating object → tame or neon (and later materials) from one catalog.
 
+**Contrast is king. Icons must be glanceable.** Never flood a face with emission or bloom. Neon is an edge tube only.
+
 This repository is an **icon pack**. `examples/python/src/hello/` is bootstrap CI glue. Do not implement About/donate chrome as the product. Do not free-form prompts. Do not skip `catalog/icons.yaml` or `prompts/template.txt`.
 
 First milestone: camera + messages × tame + neon. Production renders: Blender/Cycles on the local GPU. CI: dry-run JSON only.

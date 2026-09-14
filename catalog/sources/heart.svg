@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <!-- One closed path so the silhouette survives SVG import. CC0. -->
+  <path fill="#E91E63" d="M128 216C128 216 40 160 40 108C40 76 64 52 92 52C108 52 122 60 128 76C134 60 148 52 164 52C192 52 216 76 216 108C216 160 128 216 128 216z"/>
+</svg>

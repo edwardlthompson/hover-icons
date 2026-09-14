@@ -11,10 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 * **pack:** Hover Icons catalog, dry-run CI renderer, and Cycles OptiX goldens for camera and messages
+* **pack:** home and heart catalog icons (YAML + SVG only)
+* **pack:** phone and email catalog icons (YAML + SVG) with Cycles goldens
+* **pack:** glass, metal, and ceramic effect presets on cached meshes
 
 ### Fixed
 
+* **pack:** look-down hover with a glossy floor reflection; clean messages tail mesh
+* **pack:** center each icon in the locked frame and raise the studio camera 10°
+* **pack:** lock Apple 15° look-down / 30° right three-quarter (faces slightly left)
+* **pack:** dark studio; tame is satin tubing; neon is a rich saturated catalog-colored glow on outline tubes with an empty middle (never white)
+* **pack:** reset SVG curve point radii after fit-scale so bevel stays a thin tube and does not swallow holes
+* **pack:** neon keeps satin highlights on the tubes with a brighter catalog-colored halo
 * **ci:** allowlist first-milestone `renders/golden/` PNGs in the 500 KB hygiene gate
+* **ci:** sync HTML README template badge with `.template-version` (Release Please 1.0.0)
 
 ## [1.0.0](https://github.com/edwardlthompson/hover-icons/compare/v1.4.0...v1.0.0) (2026-09-14)
 
@@ -199,7 +209,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * **release:** prepare v1.0.0 release ([6e037a2](https://github.com/edwardlthompson/hover-icons/commit/6e037a237aaa62c9b6c4514264ca527437056e21))
 
 ## [1.4.0](https://github.com/edwardlthompson/agent-project-bootstrap/compare/v1.3.0...v1.4.0) (2026-09-11)
-
 
 ### Added
 

@@ -21,10 +21,9 @@
 |----|-------|------------|
 | FR-1 | As an agent I fill prompts only from the locked template + catalog | No free-form prompt text; slots `[ICON_DESCRIPTION]`, `[COLOR]`, `[MATERIAL_AND_EFFECT]` only |
 | FR-2 | As a maintainer I add an icon by dropping an SVG and a YAML block | `scripts/validate_catalog.py` fails if a `source` is missing |
-| FR-3 | As a renderer I apply tame or neon to the same mesh | Effects are material strings + output folders; camera/messages first |
+| FR-3 | As a renderer I apply tame, neon, glass, metal, or ceramic to the same mesh | Effects are material strings + output folders; camera/messages first |
 | FR-4 | As CI I validate the catalog without a GPU | Dry-run writes JSON sidecars; no CUDA/Blender/PNG requirement |
 | FR-5 | As a human I get camera/tame then camera/neon then messages as goldens | Same camera, lights, 1024², Android-safe padding; silhouette stays the 2D icon |
-
 ## Non-Functional Constraints
 
 - Code MIT; authored SVGs CC0; generated PNGs CC0; third-party 2D sources keep their licenses (`LICENSE-ASSETS.md`)
@@ -48,6 +47,7 @@ flowchart LR
   mesh --> blender
   blender --> png[renders PNG]
   blender --> log[sidecar JSON]
+
 ```
 
 Production renderer: Blender/Cycles OptiX on a local GPU (this host has an RTX 4090). CI backend: `dry-run`. Silhouette lock is the mesh from `source`, not ControlNet. Catalog still stores ControlNet type/weight for logs and a future lookdev backend.

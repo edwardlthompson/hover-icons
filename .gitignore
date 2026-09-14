@@ -105,6 +105,7 @@ renders/base/*.png
 renders/effects/**/*.png
 renders/logs/*
 !renders/logs/.gitkeep
+renders/golden/preview-inline.html
 
 
 # Optional Nix (flake.nix wraps scripts/ only)

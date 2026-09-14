@@ -1,0 +1,23 @@
+{
+  "icon_id": "email",
+  "effect": "tame",
+  "seed": 1591853186,
+  "prompt": "Photorealistic 3D render of a single classic envelope outline with a V flap, empty middle, colored #FF9800, satin outline tubes, empty middle, soft gloss.\nThe object is bent from round tubing along the classic 2D silhouette, with an empty middle and no filled face, keeping the exact outline and proportions.\nIt floats in mid-air at a gentle 15-degree look-down, three-quarter view from the right (front and right side visible, facing slightly left).\nStudio product photography: single key light from upper-left at 45 degrees, soft fill from the right, subtle rim light, faint contact shadow on an infinite seamless dark studio backdrop.\nHighly detailed surface with realistic reflections, subsurface scattering where appropriate, physically based materials.\n8k, ultra-sharp, cinematic lighting, octane / redshift quality, no text, no extra objects, no background clutter.\n",
+  "negative": "flat, 2D, cartoon, illustration, sketch, low poly, deformed, extra limbs, text, watermark, logo, multiple objects, busy background, oversaturated, neon glow, blurry, noisy, cropped, out of frame",
+  "source": "catalog/sources/email.svg",
+  "png_path": "renders/base/email.png",
+  "json_path": "renders/base/email.json",
+  "golden_path": "renders/golden/email_tame.png",
+  "mesh_path": "meshes/email.glb",
+  "color": "#FF9800",
+  "material": "satin outline tubes, empty middle, soft gloss",
+  "controlnet_type": "canny",
+  "controlnet_weight": 0.75,
+  "resolution": 1024,
+  "catalog_commit": "b1b72f8218d479fa09b126a491eb5a23c29c08aa",
+  "scene_hash": "hover-icons-scene-v19-neon-bloom-1024",
+  "root": "/home/edward/Repo/Hover Icons",
+  "quality": "release",
+  "cycles_device": "OPTIX",
+  "blender": "4.5.3 LTS"
+}
