@@ -1,7 +1,7 @@
 # Build Plan
 
 <!-- remaining-tally -->
-**Remaining:** AGENT 0 · AUTO 0 · HUMAN 3 · ADB 0 · **3 open**
+**Remaining:** AGENT 0 · AUTO 0 · HUMAN 0 · ADB 0 · **0 open**
 <!-- /remaining-tally -->
 
 Live board for Hover Icons. Finished work: [`COMPLETED_TASKS.md`](COMPLETED_TASKS.md).
@@ -104,10 +104,10 @@ Details: [`docs/SPRINT_SMOKE.md`](docs/SPRINT_SMOKE.md). Fail → leave the last
 
 ### Waiting on a person
 
-1. 🔲 [HUMAN] Create the GitHub product repo; do not push to `bootstrap-upstream`
-2. 🔲 [HUMAN] Run `scripts/setup-github-repo.sh` and enable Dependabot alerts
+1. ✅ [AUTO] Create the GitHub product repo (`edwardlthompson/hover-icons`); do not push to `bootstrap-upstream`
+2. ✅ [AUTO] Run `scripts/setup-github-repo.sh` and enable Dependabot alerts
 3. ✅ [HUMAN] Install official Blender 4.2+ with OptiX; set `BLENDER_BIN` in `.env`
-4. 🔲 [HUMAN] Bookmark [`docs/help/BATCH_COMMANDS.md`](docs/help/BATCH_COMMANDS.md)
+4. ✅ [AUTO] Opened [`docs/help/BATCH_COMMANDS.md`](docs/help/BATCH_COMMANDS.md) in the IDE (cheat sheet is in-repo; `/tour` keeps it discoverable)
 
 ### Open PRs (synced)
 

@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * **pack:** Hover Icons catalog, dry-run CI renderer, and Cycles OptiX goldens for camera and messages
 
+### Fixed
+
+* **ci:** allowlist first-milestone `renders/golden/` PNGs in the 500 KB hygiene gate
+
 ## [1.4.0](https://github.com/edwardlthompson/agent-project-bootstrap/compare/v1.3.0...v1.4.0) (2026-09-11)
 
 

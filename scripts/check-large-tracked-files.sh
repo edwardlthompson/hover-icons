@@ -13,6 +13,10 @@ reported=0
 
 while IFS= read -r file; do
   [ -z "$file" ] && continue
+  # First-milestone goldens (1024² PNGs). Bulk renders stay gitignored.
+  if [[ "$file" == renders/golden/* ]]; then
+    continue
+  fi
   size=$(git cat-file -s "HEAD:$file" 2>/dev/null || echo 0)
   if [ "$size" -gt "$MAX_BYTES" ]; then
     kb=$((size / 1024))

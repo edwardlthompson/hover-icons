@@ -17,6 +17,13 @@
 
 ## Entries
 
+### 2026-09-13 — Product GitHub origin (not bootstrap-upstream)
+- **Status:** Accepted
+- **Context:** Remaining HUMAN rows were create-repo, `setup-github-repo.sh`, and bookmarking the command cheat sheet. `gh` is authenticated as `edwardlthompson`.
+- **Decision:** `scripts/create-product-github-repo.sh` creates public `edwardlthompson/hover-icons`, adds `origin`, and never pushes to `bootstrap-upstream`. `setup-github-repo.sh` enables Dependabot alerts, private reporting, and branch protection. The cheat sheet is opened from `docs/help/BATCH_COMMANDS.md` (in-repo) instead of a browser bookmark.
+- **Alternatives considered:** Cursor-hosted origin (rejected: pack is GitHub FOSS). Pushing to the template remote (rejected).
+- **Consequences:** Product URL is https://github.com/edwardlthompson/hover-icons. AUTOMERGE_TOKEN is set on that repo. Remaining BUILD_PLAN HUMAN count is 0.
+
 ### 2026-09-13 — Hover Icons product + Blender production renderer
 - **Status:** Accepted
 - **Context:** Child repo for a photoreal FOSS icon pack. Bootstrap Golden Path (hello/About) is CI glue. RTX 4090 is available locally; GitHub Actions has no GPU. Catalog may grow to 4000+ icons.

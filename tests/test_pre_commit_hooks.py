@@ -101,6 +101,23 @@ class PreCommitHookTests(unittest.TestCase):
         script = (ROOT / "scripts/run-python-mypy.sh").read_text(encoding="utf-8")
         self.assertIn("uv run mypy src", script)
 
+    def test_golden_pngs_are_excluded_from_large_file_gate(self) -> None:
+        cfg = (ROOT / ".pre-commit-config.yaml").read_text(encoding="utf-8")
+        self.assertIn("exclude: ^renders/golden/", cfg)
+        script = (ROOT / "scripts/check-large-tracked-files.sh").read_text(encoding="utf-8")
+        self.assertIn("renders/golden/*", script)
+        bash = _bash()
+        if not bash:
+            self.skipTest("bash not available")
+        proc = subprocess.run(
+            [bash, "scripts/check-large-tracked-files.sh"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

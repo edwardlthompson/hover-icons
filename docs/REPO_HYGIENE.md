@@ -18,7 +18,7 @@
 | Secret scanning | Pre-commit + CI (`gitleaks`) |
 | Vulnerability scanning | CI (`security.yml`: Trivy, CodeQL) |
 | Dependency updates | Dependabot weekly + PR dependency-review |
-| Large files (>500 KB) | Pre-commit (staged) + `check-large-tracked-files.sh` (full tree) |
+| Large files (>500 KB) | Pre-commit (staged) + `check-large-tracked-files.sh` (full tree). `renders/golden/` is allowlisted. |
 | Tracked build artifacts | `check-tracked-artifacts.sh` |
 | UTF-8 encoding | Pre-commit + CI `encoding-check` |
 | Merge conflicts / private keys | Pre-commit hooks |
