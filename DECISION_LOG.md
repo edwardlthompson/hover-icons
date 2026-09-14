@@ -17,6 +17,13 @@
 
 ## Entries
 
+### 2026-09-14 — v1.1.0 outline tubes + HTML template badge
+- **Status:** Accepted
+- **Context:** `/ship` after local Cycles goldens. Origin `v1.0.0` left CI red: `catalog-validate` ran Python with `bash`, and `sync-template-version.sh` only rewrote markdown `![Template]` badges so the generated HTML README stayed `template-1.4.0` while `.template-version` was `1.0.0`.
+- **Decision:** Neon is catalog-colored outline tubes with an empty middle (MixShader + colored FOG_GLOW, not AddShader). Reset Bezier point `radius` to 1.0 after fit-scale. Run `validate_catalog.py` with `$PY`. Sync HTML `badge/template-` URLs. Merge Release Please #4 after approving first-run workflow waits.
+- **Alternatives considered:** Git LFS for goldens (rejected without `[HUMAN]`). Flooding faces with emission (rejected: contrast is king).
+- **Consequences:** Tag `v1.1.0`. Goldens stay under `renders/golden/` (hygiene allowlist). Parent template remains agent-project-bootstrap 1.4.0; `.template-version` tracks the product release.
+
 ### 2026-09-13 — Product GitHub origin (not bootstrap-upstream)
 - **Status:** Accepted
 - **Context:** Remaining HUMAN rows were create-repo, `setup-github-repo.sh`, and bookmarking the command cheat sheet. `gh` is authenticated as `edwardlthompson`.

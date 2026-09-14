@@ -10,6 +10,7 @@
 | Platform | Python catalog + optional local Blender/Cycles | 0.1.0 | Child of agent-project-bootstrap 1.4.0 |
 | License | MIT code; CC0 SVGs and generated PNGs | - | See LICENSE-ASSETS.md |
 | Distribution | GitHub; golden PNGs in renders/golden | - | Bulk renders gitignored |
+
 ## Active Modules
 
 - ✅ Web / PWA (`modules/web/MODULE.md`)
@@ -52,7 +53,7 @@ Golden Path Settings/About/Feedback are a route stack, not three booleans. Web H
 
 ## Session Retrospectives
 
-| 2026-09-13 | /build Sprint 4 | home+heart catalog; glass/metal/ceramic presets; smoked and archived | Do not merge RP 1.0.0 until `/ship`; extra goldens stay gitignored |
+| 2026-09-14 | v1.1.0 /ship | Outline-tube goldens (camera/messages/phone/email); RP #4; HTML badge sync; catalog-validate via Python | Reset SVG point radii after fit-scale; leave CodeQL `@v4`; never push bootstrap-upstream |
 | 2026-09-11 | v1.4.0 /ship | Monday child template-gap BUILD_PLAN sync; RP #107; patch/minor deps; leave CodeQL `@v4` | Plan-only gaps; Sacred stays HUMAN; no silent `/upgrade` apply |
 | 2026-09-11 | v1.3.0 /push | RP #106 admin-merged; tag+release live; CI green after TBT + instrumented soft skips | Lightroom (#29) stays HUMAN; do not use JUnit Assume on connectedAndroidTest |
 | 2026-09-10 | M58–M61 /build | Espresso 3.7 + agent DX; M58–M61 archived; KB-023 path spaces; Release Please #106 open | Do not fold Unreleased until /push+/ship; merge RP is HUMAN |
